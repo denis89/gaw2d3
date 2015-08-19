@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
  
- // Balance 1 
+ // Checking Account 
 
  
 var value2 = 0; 
@@ -29,8 +29,31 @@ var value2 = 0;
     });
 
 
+// Saving Account
+
+var valueS = 0; 
+
+ $(deposit2).on('click', function(){ 
+    var valueST = $('#amount2').val();
+    var newbalance1 = $('#balance2');
+     
+     valueS = parseFloat(valueS) + parseFloat(valueST);
+    newbalance1.html(valueS);
+    }); 
 
 
+  $(withdraw2).on('click', function(){ 
+    var devalue = $('#amount2').val();
+    var newbalance2 = $('#balance2');
+     
+     var valueS =$('#amount2').val();
+
+       value3= parseFloat(value2) - parseFloat(devalue);
+       
+       if(value3<=0){$('#balance2').css('background-color', 'red');}
+       else{
+    newbalance2.html(value3);}
+    });
  
 
 
