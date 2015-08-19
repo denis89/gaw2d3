@@ -1,0 +1,1 @@
+Both account has to be red, when its balances are red.
