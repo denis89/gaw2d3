@@ -12,6 +12,7 @@ var value2 = 0;
      
      value2 = parseFloat(value2) + parseFloat(value);
     newbalance1.html(value2);
+
     }); 
 
 
@@ -23,7 +24,21 @@ var value2 = 0;
 
        value3= parseFloat(value2) - parseFloat(devalue);
        
-       if(value3<=0){$('#balance1').css('background-color', 'red');}
+       if(value3<=0){$('#balance1').css('background-color', 'red');
+
+
+var newbalanceS = $('#balance2');
+//var devalueS = $('#amount2').val();
+//     var valueS =$('#amount2').val()//;
+//var valueSav = parseFloat(valueS)-parseFloat(devalueS); 
+
+         if(newbalanceS >0 ){
+          var diff = newbalance1 - parseFloat(devalue);
+    
+          valueSD = parseFloat(newbalanceS) + diff;
+          newbalanceS.html(valueSD);
+         }
+     }
        else{
     newbalance2.html(value3);}
     });
