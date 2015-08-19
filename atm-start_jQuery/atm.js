@@ -2,8 +2,11 @@
 $(document).ready(function(){
  
  // Balance 1 
-var value2 =0;
-  $(deposit1).on('click', function(){ 
+
+ 
+var value2 = 0; 
+
+ $(deposit1).on('click', function(){ 
     var value = $('#amount1').val();
     var newbalance1 = $('#balance1');
      
@@ -16,16 +19,25 @@ var value2 =0;
     var devalue = $('#amount1').val();
     var newbalance2 = $('#balance1');
      
-      value3=value2 - devalue;
-    newbalance2.html(value3);
+     var value2 =$('#amount1').val();
+
+       value3= parseFloat(value2) - parseFloat(devalue);
+       
+       if(value3<=0){$('#balance1').css('background-color', 'red');}
+       else{
+    newbalance2.html(value3);}
     });
+
+
+
+
  
 
 
- $('#amount1').focus(function() {
-  var input = $(this);
-   console.log(input);
-  }); 
+ //$('#amount1').focus(function() {
+ // var input = $(this);
+ //  console.log(input);
+ // }); 
 // End of document ready.
  });
 
